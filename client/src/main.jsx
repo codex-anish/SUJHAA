@@ -3,8 +3,8 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import DashboardLayout from './components/layouts/DashboardLayout.jsx';
-import Dashboard from './components/Dashboard';
+import BeneficiaryDashboardLayout from './components/layouts/BeneficiaryDashBoardLayout.jsx';
+import BeneficiaryDashboard from './components/BeneficiaryDashboard.jsx';
 import NewProject from './components/NewProject';
 import MyApplications from './components/MyApplications';
 import Documents from './components/Documents';
@@ -13,14 +13,15 @@ import FundStatus from './components/FundStatus';
 
 const router = createBrowserRouter([
   {
-    element: <DashboardLayout />,
+    path: "/beneficiary",
+    element: <BeneficiaryDashboardLayout />,
     children: [
-      { path: '/', element: <Dashboard /> },
-      { path: '/NewProject', element: <NewProject /> },
-      { path: '/MyApplications', element: <MyApplications /> },
-      { path: '/Documents', element: <Documents /> },
-      { path: '/SkillTraining', element: <SkillTraining /> },
-      { path: '/FundStatus', element: <FundStatus /> },
+      { path: 'dashboard', element: <BeneficiaryDashboard /> },
+      { path: 'dashboard/newProject', element: <NewProject /> },
+      { path: 'dashboard/beneficiaryApplications', element: <MyApplications /> },
+      { path: 'dashboard/documents', element: <Documents /> },
+      { path: 'dashboard/skillTraining', element: <SkillTraining /> },
+      { path: 'dashboard/fundStatus', element: <FundStatus /> },
     ],
   },
 ]);
