@@ -65,7 +65,7 @@ const centralDashBoard = () => {
     };
 
     return (
-        <div className="p-6 bg-gray-50 min-h-screen">
+        <div className="flex-1 p-6 bg-gray-50 min-h-screen">
             {/* Header */}
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">
                 Welcome, State Officer 👋
