@@ -17,9 +17,9 @@ import StateDashboard from './components/state/StateDashboard.jsx';
 import StateBeneficiary from './components/state/StateBeneficiary.jsx';
 import StateFund from './components/state/StateFund.jsx';
 import StateTraining from './components/state/StateTraining.jsx';
-import DistrictLayout from './components/district/DistrictLayout.jsx';
+import DistrictLayout from './components/layouts/DistrictLayout.jsx';
 import DistrictDashboard from './components/district/DistrictDashboard.jsx';
-import centralLayout from './components/central/centralLayout.jsx';
+import centralLayout from './components/layouts/CentralLayout.jsx';
 import centralDashBoard from './components/central/centralDashBoard.jsx';
 import LandingPage from './components/main/LandingPage';
 

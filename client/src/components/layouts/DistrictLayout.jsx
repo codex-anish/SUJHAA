@@ -1,6 +1,6 @@
 import React from 'react'
-import DistrictNavbar from './DistrictNavbar';
-import DistrictSidebar from './DistrictSidebar';
+import DistrictNavbar from '../district/DistrictNavbar';
+import DistrictSidebar from '../district/DistrictSidebar';
 import { Outlet } from 'react-router';
 
 const DistrictLayout = () => {
