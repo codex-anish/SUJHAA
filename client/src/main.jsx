@@ -19,6 +19,8 @@ import StateFund from './components/state/StateFund.jsx';
 import StateTraining from './components/state/StateTraining.jsx';
 import DistrictLayout from './components/district/DistrictLayout.jsx';
 import DistrictDashboard from './components/district/DistrictDashboard.jsx';
+import centralLayout from './components/central/centralLayout.jsx';
+import centralDashBoard from './components/central/centralDashBoard.jsx';
 
 const router = createBrowserRouter([
   { path: "/", element: <Navigate to="/beneficiary" replace /> },
@@ -53,9 +55,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/central",
-    element: <DistrictLayout />,
+    element: <centralLayout />,
     children: [
-      { index: true, element: < },
+      { index: true, element: <centralDashBoard /> },
     ]
   },
 ]);
