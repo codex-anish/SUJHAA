@@ -11,6 +11,8 @@ const beneficiarySchema = new mongoose.Schema({
         {
             label: String,
             filePath: String,
+            uploadedByRole: String,
+            uploadedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
             uploadedAt: Date
         }
     ]

@@ -6,14 +6,19 @@ import { allowRoles } from "../middlewares/role.middleware.js";
 
 const router = express.Router();
 
-router.post("/",
+router.post(
+    "/",
     auth,
     allowRoles("Beneficiary", "FieldOfficer", "DistrictOfficer", "StateOfficer", "CentralAdmin"),
-    createBeneficiary);
-router.post("/:id/upload",
+    createBeneficiary
+);
+
+router.post(
+    "/:id/documents",
     auth,
-    allowRoles("FieldOfficer", "DistrictOfficer", "StateOfficer", "CentralAdmin"),
-    upload.single("file"),
-    uploadDocument);
+    allowRoles("Beneficiary", "FieldOfficer", "DistrictOfficer", "StateOfficer", "CentralAdmin"),
+    upload.array("documents", 5),
+    uploadDocument
+);
 
 export default router;
